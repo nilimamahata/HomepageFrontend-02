@@ -3,28 +3,51 @@ import './LowerGrid.css';
 const LowerGrid = () => {
   return (
     <div className="lower-grid">
-      {/* Shiksha Talks Banner */}
-      <div className="shiksha-talks">
-        <div className="talks-content">
-          <h2>Career Councelling</h2>
-          <p>Inspiring conversations on education, learning, and growth</p>
-          <button className="talks-btn">Listen Now</button>
+      {/* STATS SECTION */}
+      <section className="stats-section">
+        <div className="stat">
+          <div className="number">31+</div>
+          <div className="label">Courses</div>
         </div>
-        <div className="talks-image">
-          <img src="/placeholder-teacher.jpg" alt="Teacher speaking" />
+        <div className="stat">
+          <div className="number">10k+</div>
+          <div className="label">Enrollment</div>
         </div>
-      </div>
+        <div className="stat">
+          <div className="number">7</div>
+          <div className="label">Sites</div>
+        </div>
+      </section>
 
-      {/* Digital India Banner */}
-      <div className="digital-india">
-        <div className="digital-content">
-          <h2>Digital India Initiative</h2>
-          <p>Bringing e-learning to every corner of the nation</p>
+      {/* WHY CHOOSE SHIKSHA HEADING */}
+      <section className="why-choose-heading">
+        <h2>Why Choose Shiksha?</h2>
+      </section>
+
+      {/* WHY CHOOSE SECTION */}
+      <section className="why-choose-section">
+        <div className="features">
+          <div className="feature-card">
+            <h4>Academic Courses</h4>
+            <p>Comprehensive curriculum for all levels.</p>
+          </div>
+          <div className="feature-card">
+            <h4>Advance Teaching</h4>
+            <p>Expert instructors with modern methods.</p>
+          </div>
+          <div className="feature-card">
+            <h4>Self Paced Learning</h4>
+            <p>Learn at your own speed.</p>
+          </div>
+          <div className="feature-card">
+            <h4>Registration</h4>
+            <p>Easy and quick enrollment process.</p>
+          </div>
         </div>
-        <div className="digital-image">
-          <img src="/placeholder-digital.jpg" alt="Digital education" />
+        <div className="promo-video">
+          <p>promo vid</p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

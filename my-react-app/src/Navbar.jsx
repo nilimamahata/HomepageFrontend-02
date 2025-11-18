@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
-  {/*const [contrast, setContrast] = useState(false);
+  const [contrast, setContrast] = useState(false);
   const [fontSize, setFontSize] = useState(1);
   const [language, setLanguage] = useState('EN');
 
@@ -24,12 +25,12 @@ const Navbar = () => {
 
   const switchLanguage = () => {
     setLanguage(language === 'EN' ? 'हिंदी' : 'EN');
-  }; */}
+  }; 
 
   return (
     <>
       {/* Top Slim Strip */}
-     {/* <div className="top-strip">
+      <div className="top-strip">
         <div className="strip-text">
         </div>
         <div className="strip-controls">
@@ -48,7 +49,7 @@ const Navbar = () => {
             {language}
           </button>
         </div>
-      </div> */} 
+      </div> 
 
       {/* Main Header */}
       <header className="main-header">
@@ -63,16 +64,15 @@ const Navbar = () => {
           <img src="/Shiksha.png" alt="Shiksha Logo" className="logo" />
           <div className="title">
             <h1>ShikshaCom</h1>
+            <p>Empowerment Through Education</p>
           </div>
           </Link>
         </div>
-       {/* <div className="header-right">
-          <span className="badge">Student Dashboard</span>
-          <span className="badge">Teacher Dashboard</span>
-          <span className="badge">Advance Teachings</span>
-          <span className="badge">Career Councelling</span>
-          <span className="badge">Digital India</span>
-        </div> */} 
+        <div className="header-right">
+            <a href="https://www.facebook.com/profile.php?id=61580053190184" className="social-icon" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/shikshacom/" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@Shikshacom-edu" className="social-icon" aria-label="YouTube"><FaYoutube /></a>
+        </div> 
       </header>
 
       {/* Navigation Bar */}

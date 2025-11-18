@@ -14,37 +14,62 @@
   gap: 30px;
 }
 
-.highlight-card {
-  display: flex;
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
   background-color: #f9f7f0;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 12px;
+  padding: 45px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  min-height: 180px;
 }
 
-.card-image {
-  flex: 1;
-  background-color: #e8e6df;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.login-options {
+.card h4 {
+  color: #6b5b47;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  color: #8b7d6b;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* Right Column */
+.right-column {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.auth-buttons {
+  display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .login-btn, .signup-btn {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex: 1;
 }
 
 .login-btn {
@@ -59,68 +84,54 @@
 
 .login-btn:hover, .signup-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-content {
-  flex: 1;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card-content h2 {
-  color: #6b5b47;
-  margin-bottom: 10px;
-}
-
-.card-content p {
-  color: #8b7d6b;
-  font-size: 18px;
-}
-
-.carousel {
+.notification-panel {
   background-color: #f9f7f0;
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.carousel h3 {
+.notification-panel h3 {
   color: #6b5b47;
   margin-bottom: 15px;
 }
 
-.carousel-container {
+.rolling-notification-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+
+.notification-list {
+  position: absolute;
+  width: 100%;
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  flex-direction: column;
 }
 
-.carousel-item {
-  min-width: 250px;
+.notification-item {
   background-color: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.carousel-item h4 {
+.notification-item p {
   color: #6b5b47;
-  margin-bottom: 5px;
-}
-
-.carousel-item p {
-  color: #8b7d6b;
-}
-
-.announcements {
-  background-color: #f9f7f0;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: slideUp 0.5s ease-out;
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
 }
 
 @keyframes slideUp {
@@ -134,41 +145,15 @@
   }
 }
 
-.announcement-icon {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.announcements h3 {
-  color: #6b5b47;
-  margin-bottom: 15px;
-}
-
-.announcements ul {
-  list-style: none;
-  padding: 0;
-}
-
-.announcements li {
-  color: #8b7d6b;
-  margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.announcements li:before {
-  content: "•";
-  color: #b8a085;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* Right Column */
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .connect-box {
@@ -285,27 +270,14 @@
     padding: 20px;
   }
 
-  .highlight-card {
-    flex-direction: column;
-  }
-
-  .card-image {
-    padding: 15px;
-  }
-
-  .login-options {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .carousel-container {
-    flex-direction: column;
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 15px;
   }
 
-  .carousel-item {
-    min-width: auto;
+  .auth-buttons {
+    flex-direction: column;
   }
 
   .social-media {

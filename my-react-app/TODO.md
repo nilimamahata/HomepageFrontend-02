@@ -1,14 +1,9 @@
-- [x] Update index.html title to "Shiksha - National Learning Portal"
-- [x] Create Navbar.jsx component with top slim strip, main header, and navigation bar
-- [x] Add accessibility features: contrast toggle, font size adjust, language switcher
-- [x] Implement beige navbar with navy blue dropdowns on hover
-- [x] Make navbar responsive with media queries
-- [x] Update App.jsx to render Navbar and basic landing content
-- [x] Update CSS files for styling
-- [x] Create landing page header with search bar and icons
-- [x] Implement 3-column main grid layout
-- [x] Add left column blocks: highlight card, carousel, announcements
-- [x] Add right column: connect box, dashboard button, social media, achievers feed
-- [x] Add lower grid section: Shiksha Talks banner, learning images, digital India banner
-- [x] Ensure full responsiveness and beige theme
-- [x] Test responsiveness and functionality
+# TODO: Update Landing Page Design
+
+## Tasks
+- [x] Modify MainGrid.jsx to implement 8-card grid (4 cards per row, 2 rows) on the left side
+- [x] Add rolling notification panel on the right side
+- [x] Include login and signup buttons in the right panel
+- [x] Update MainGrid.css to style the new layout with proper grid structure
+- [x] Implement infinite upward rolling notifications without reset
+- [ ] Test the updated design for responsiveness and functionality

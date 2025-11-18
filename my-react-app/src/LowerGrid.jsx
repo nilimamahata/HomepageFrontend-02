@@ -15,15 +15,6 @@ const LowerGrid = () => {
         </div>
       </div>
 
-      {/* Students Learning Image */}
-      <div className="learning-image">
-        <img src="/placeholder-students.jpg" alt="Students learning" />
-        <div className="image-overlay">
-          <h3>Empowering Young Minds</h3>
-          <p>Quality education</p>
-        </div>
-      </div>
-
       {/* Digital India Banner */}
       <div className="digital-india">
         <div className="digital-content">

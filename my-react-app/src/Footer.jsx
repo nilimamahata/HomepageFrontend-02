@@ -26,11 +26,11 @@ const Footer = () => {
           <div className="footer-nav-group">
             <h4>Company</h4>
             <ul>
-              <li><a href="#about">About</a></li>
+              <li><a href="/about">About</a></li>
               <li><a href="#courses">Courses</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#feedback">Feedback</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/">Feedback</a></li>
             </ul>
           </div>
           <div className="footer-nav-group">

@@ -120,7 +120,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #0a2d5e; /* Navy blue */
+  background-color: #cedaea; /* Navy blue */
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1000;
@@ -131,15 +131,16 @@
 }
 
 .dropdown-menu a {
-  color: white;
+  color: #495057;
   padding: 12px 16px;
   display: block;
   text-decoration: none;
 }
 
 .dropdown-menu a:hover {
-  background-color: #1a4a7a; /* Slightly lighter blue */
+  background-color: #a5c2df; /* Slightly lighter blue */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
